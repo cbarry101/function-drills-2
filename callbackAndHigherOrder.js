@@ -118,7 +118,7 @@ const uniq = (array, callback) => {
     for (let k = 0; k<array.length; k++){
       if (i !== k){
         if (array[i] === array[k]){
-          array.splice(i, 1)
+          array.splice(k, 1)
         }
       }
     }
@@ -274,3 +274,14 @@ let addTwentyOne = addingFactory(21)
 
 
 console.log(addTwentyOne(21))
+
+
+// additonal practice
+
+
+const divide = (num1,num2, callback) => {
+  return callback(num1 /num2)
+}
+divide(12, 4, result => {
+  console.log(`The result is ${result}`)
+})
